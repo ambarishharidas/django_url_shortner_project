@@ -29,7 +29,7 @@ def home_page(request):
             context['clicks']=obj.clicks
             context['submitted']=True
             context['longurl']=data['longurl']
-            context['custom_name']=request.build_absolute_uri() + data['custome_name']
+            context['custom_name']=request.build_absolute_uri() + data['custom_name']
         except:
             context['error']=True
     else:
