@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
-import requests
 from .models import LongToShort
 from .models import ShortUrlDetails
 # Create your views here.
@@ -41,8 +40,6 @@ def home_page(request):
 
 
 def redirect_url(request,shorturl):
-    ip = request.get('REMOTE_ADDR')
-    response = requests.get('http://api.ipstack.com/'+ip+'?access_key=GETYOURACCESSKEY')
     row = LongToShort.objects.filter(short_url=shorturl)
     if len(row)==0:
         return HttpResponse('No such short url exist')
