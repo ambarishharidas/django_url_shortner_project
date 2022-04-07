@@ -8,3 +8,7 @@ class LongToShort(models.Model):
     date = models.DateField(auto_now_add=True)
     clicks = models.IntegerField(default=0)
 
+class ShortUrlDetails(models.Model):
+    short_url = models.CharField(max_length=50)
+    location = models.CharField(max_length=50)
+    
