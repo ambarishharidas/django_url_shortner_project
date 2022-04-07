@@ -21,7 +21,7 @@ def home_page(request):
 
         # CREATE
         try:
-            obj = LongToShort(long_url= data['longurl'], short_url = data['longurl'])
+            obj = LongToShort(long_url= data['longurl'], short_url = data['custom_name'])
             obj.save()
 
             # READ
