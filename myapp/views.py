@@ -51,10 +51,10 @@ def redirect_url(request,shorturl):
     return redirect(long_url)
 
 
-def all_analytics(request):
+def all_links(request):
     rows = LongToShort.objects.all()
     context = {'rows':rows}
-    return render(request,'all-analytics.html',context)
+    return render(request,'all-links.html',context)
 
 
 def task(request):

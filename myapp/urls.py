@@ -7,6 +7,6 @@ urlpatterns = [
     path('hello',views.hello_world),
     path('',views.home_page),
     path('task',views.task),
-    path('all-analytics',views.all_analytics),
+    path('all-links',views.all_links),
     path('<slug:shorturl>', views.redirect_url)
 ]
